@@ -1,0 +1,7 @@
+<odoo>
+
+        <record id="testmodel_manager" model="res.groups">
+            <field name="name">Test Model / Manager</field>
+        </record>
+
+</odoo>

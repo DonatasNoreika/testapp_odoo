@@ -1,0 +1,4 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+testmodel_manager_all,testmodel manager,model_testapp_testmodel,testmodel_manager,1,1,1,1
+testsubmodel_manager_all,testsubmodel manager,model_testapp_testsubmodel,testmodel_manager,1,1,1,1
+testsubmodel_read_all,testsubmodel all,model_testapp_testsubmodel,,1,0,0,0

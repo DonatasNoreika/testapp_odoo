@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record model="ir.actions.act_window" id="testsubmodel_list_action">
+        <field name="name">Test Models</field>
+        <field name="res_model">testapp.testsubmodel</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create the first Test SubModel
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="testsubmodels_menu" name="Test SubModels" parent="dn_testmodels_menu"
+              action="testsubmodel_list_action"/>
+
+</odoo>

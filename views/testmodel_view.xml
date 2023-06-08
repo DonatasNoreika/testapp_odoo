@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.ui.view" id="testmodel_form_view">
+        <field name="name">project.form</field>
+        <field name="model">testapp.testmodel</field>
+        <field name="arch" type="xml">
+            <form string="Project Form">
+                <sheet>
+                    <group name="Pagrindinė info">
+                        <field name="name"/>
+                        <field name="partner_id"/>
+                    </group>
+                    <notebook>
+                        <page string="Submodels">
+                            <group>
+                                <field name="submodel_ids">
+                                    <form>
+                                        <group>
+                                            <field name="name"/>
+                                        </group>
+                                    </form>
+                                </field>
+                            </group>
+                        </page>
+                        <page string="Darbuotojai">
+                            <group>
+                                <field name="employee_ids">
+                                    <tree>
+                                        <field name="name"/>
+                                        <field name="mobile_phone"/>
+                                    </tree>
+                                </field>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="testmodel_list_action">
+        <field name="name">Test Models</field>
+        <field name="res_model">testapp.testmodel</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create the first Test Model
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="main_testmodels_menu" name="Test Model App"/>
+    <menuitem id="dn_testmodels_menu" name="Test Models"
+              parent="main_testmodels_menu"/>
+    <menuitem id="testmodels_menu" name="Test Models" parent="dn_testmodels_menu"
+              action="testmodel_list_action"/>
+
+</odoo>
